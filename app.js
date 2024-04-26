@@ -1,3 +1,3 @@
 function alertButton() {
-    alert("Ohio Grimmace");
+    alert("Skibbidi");
 }
