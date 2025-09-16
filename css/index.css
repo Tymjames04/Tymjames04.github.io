@@ -45,11 +45,22 @@ body {
   transition: 0.2s ease-in-out;
 }
 
-.links a:hover {
-  transform: scale(1.05);
-  color: #ffffff;
-  background: #550000;
-}
+  #li:hover {
+    background: #003965;
+    color: rgb(255, 255, 255);
+  }
+  #git:hover {
+    background: #1a1a1a;
+    color: rgb(255, 255, 255);
+  }
+  #res:hover {
+    background: #235024;
+    color: rgb(255, 255, 255);
+  }
+  #cont:hover {
+    background: #7f2921;
+    color: rgb(255, 255, 255);
+  }
 
 @media only screen and (max-width: 600px) {
   #li{
@@ -58,7 +69,7 @@ body {
     color: rgb(0, 0, 0);
   }
   #git{
-    background: #b5b4b4;
+    background: #9c9c9c;
     border: 2px solid #000000;
     color: rgb(0, 0, 0);
   }
@@ -78,7 +89,7 @@ body {
     color: rgb(255, 255, 255);
   }
   #git:hover {
-    background: #525252;
+    background: #191919;
     color: rgb(255, 255, 255);
   }
   #res:hover {
