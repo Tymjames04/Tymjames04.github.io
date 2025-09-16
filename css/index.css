@@ -9,6 +9,28 @@ body {
   height: 80vh;
 }
 
+@media only screen and (max-width: 600px) {
+  .links a {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 18px;
+    font-size: 1.2em;  
+    background: #488bff;
+    border: 2px solid #000000;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+  }
+  .links a:hover {
+    transform: scale(1.05);
+    color: #ffffff;
+    background: #0040ae;
+}
+}
+
 .container {
   text-align: center;
 }
