@@ -17,7 +17,7 @@ body {
 }
 
 .container p {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
   color: #353535;
 }
 
@@ -34,10 +34,11 @@ body {
   border-radius: 18px;
   font-size: 1.2em;  
   background: #f3f7fe;
-  border: 2px, solid,#000000;
+  border: 2px solid #000000;
   color: rgb(0, 0, 0);
   font-weight: bold;
-  width: 200px;
+  width: 80%;
+  max-width: 300px;
   text-align: center;
   transition: 0.2s ease-in-out;
 }
