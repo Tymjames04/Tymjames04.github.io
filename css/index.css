@@ -17,6 +17,7 @@ body {
 }
 
 .container p {
+  font-size:large;
   margin-bottom: 2em;
   color: #353535;
 }
