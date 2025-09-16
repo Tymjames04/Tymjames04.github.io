@@ -52,13 +52,41 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-  .links a {
-    background: #a8c8ff;
+  #li{
+    background: #0069bb;
     border: 2px solid #000000;
     color: rgb(0, 0, 0);
   }
-  .links a:hover {
-    background: #5e95f3;
+  #git{
+    background: #b5b4b4;
+    border: 2px solid #000000;
     color: rgb(0, 0, 0);
-}
+  }
+  #res{
+    background: #4CAF50;
+    border: 2px solid #000000;
+    color: rgb(0, 0, 0);
+  }
+  #cont{
+    background: #D44638;
+    border: 2px solid #000000;
+    color: rgb(0, 0, 0);
+  }
+
+  #li:hover {
+    background: #003965;
+    color: rgb(255, 255, 255);
+  }
+  #git:hover {
+    background: #525252;
+    color: rgb(255, 255, 255);
+  }
+  #res:hover {
+    background: #235024;
+    color: rgb(255, 255, 255);
+  }
+  #cont:hover {
+    background: #7f2921;
+    color: rgb(255, 255, 255);
+  }
 }
