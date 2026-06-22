@@ -1,26 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head> 
-        <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="A comprehensive portfolio of creations by Tyler James">
         <title>TJ Tech</title>
-        <link rel="stylesheet" href="css/index.css"/>
         <link rel="icon" href="images/favicon.ico" sizes="32x32">
         <link rel="icon" href="images/icon.svg" type="image/svg+xml">
         <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <link rel="stylesheet" href="css/index.css">
+
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F4F5F6">
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#15171A">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <div class="container">
-        <h1>Tyler James</h1>
-        <p>Computer Engineering | Business Administration</p>
-        <div class="links">
-            <a id = li href="https://www.linkedin.com/in/tylerjames04" target="_blank">LinkedIn</a>
-            <a id = git href="https://github.com/tymjames04" target="_blank">GitHub</a>
-            <a id = res href="resume.pdf" target="_blank">Resume</a>
-            <a id = cont href="mailto:contact@tylerjamestech.com">Contact Me</a>
-        </div>
-        </div>
+        <!-- ============ PERSISTENT BAR ============ -->
+        <aside class="sidebar">
+            <div class="brand">
+                <img class="brand-logo" src="images/logo.svg" alt="">
+                <div>
+                    <span class="brand-name">Tyler James</span>
+                    <span class="brand-role">Computer Engineering</span>
+                </div>
+            </div>
+
+            <nav class="nav">
+                <a href="#home" class="active">Home</a>
+                <a href="#projects">Projects</a>
+            </nav>
+
+            <div class="sidebar-foot">
+                <span class="foot-label">Connect</span>
+                <a href="https://www.linkedin.com/in/tylerjames04" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://github.com/tymjames04" target="_blank" rel="noopener">GitHub <span aria-hidden="true">&#8599;</span></a>
+                <a href="mailto:contact@tylerjamestech.com">Email <span aria-hidden="true">&#8599;</span></a>
+            </div>
+        </aside>
+
+        <main>
+            <!-- ============ LANDING ============ -->
+            <section id="home" class="hero">
+                <p class="eyebrow">Portfolio</p>
+                <h1>Tyler James</h1>
+                <p class="tagline">Computer Engineering</p>
+                <div class="access">
+                    <a id="li" href="https://www.linkedin.com/in/tylerjames04" target="_blank" rel="noopener">LinkedIn</a>
+                    <a id="git" href="https://github.com/tymjames04" target="_blank" rel="noopener">GitHub</a>
+                    <a id="res" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+                    <a id="cont" href="mailto:contact@tylerjamestech.com">Contact Me</a>
+                </div>
+            </section>
+
+            <!-- ============ PROJECTS ============ -->
+            <section id="projects" class="projects">
+                <h2 class="section-head">Projects</h2>
+                <div class="project-grid">
+                    <article class="project">
+                        <h3>Placeholder Project</h3>
+                        <p>Test test test.</p>
+                        <div class="tags"><span>nice</span><span>wow</span><span>so-cool</span></div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener">Code &rarr;</a>
+                            <a href="#" target="_blank" rel="noopener">Demo &rarr;</a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </main>
+
+        <script>
+            const links = document.querySelectorAll('.nav a');
+            const map = {};
+            links.forEach(l => map[l.getAttribute('href').slice(1)] = l);
+
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        links.forEach(l => l.classList.remove('active'));
+                        map[e.target.id]?.classList.add('active');
+                    }
+                });
+            }, { rootMargin: '-45% 0px -45% 0px' });
+
+            document.querySelectorAll('main section').forEach(s => obs.observe(s));
+        </script>
     </body>
 </html>
